@@ -20,184 +20,175 @@
 </head>
 <body class="lexend">
   
-  <div class="fixed top-0 left-0 w-full z-10">
-    
-    
-    <div class="bg-slate-50	 h-12 flex items-center justify-between px-6">
-      
+   <!-- Navbar Section -->
+   <div class="fixed top-0 left-0 w-full z-10">
+    <div class="bg-slate-50 h-12 flex items-center justify-between px-6">
       <div>
-        <button class="bg-lime-300  text-black font-bold py-2 px-4 rounded-lg">
+        <button onclick="window.location.href='faq.html'" class="bg-lime-300 text-black font-bold py-2 px-4 rounded-lg">
           Blog
         </button>
       </div>
-      
-      <!-- Middle: "Donate Bangladesh" Text and Logo -->
-      <div class="flex items-center space-x-6 py-6  donate">
+
+      <div class="flex items-center space-x-6 py-6 donate">
         <img src="assets/logo.png" alt="Logo" class="h-8">
         <h2 class="text-xl font-semibold text-black">Donate Bangladesh</h2>
       </div>
 
-      <!-- Right Side: Amount and Logo -->
       <div class="flex items-center gap-2">
         <img src="assets/coin.png" alt="Currency Logo" class="h-6">
         <span id="navbar-amount" class="text-lg font-medium text-black mr-2">5500 BDT</span>
-        
       </div>
     </div>
 
-    <!-- Bottom 50% White Section -->
-    <div class="bg-white h-12 flex items-center justify-center space-x-6 mr-10 mbtn ">
-      <!-- Buttons: Donation and History -->
-      <button class="bg-gray-50 hover:bg-gray-500 text-black font-bold py-2 px-4 rounded-lg active:bg-lime-300">
-        Donation
-      </button>
-      <button class="bg-gray-50 hover:bg-gray-500 text-black font-bold py-2 px-4 rounded-lg active:bg-lime-300">
-        History
-      </button>
+    <!-- Bottom Button Section -->
+    <div class="bg-white h-12 flex items-center justify-center space-x-6">
+      <button class="bg-lime-300 text-black font-bold py-2 px-4 rounded-lg">Donation</button>
+      <button onclick="goToHistory()" class="bg-gray-50 hover:bg-gray-500 text-black font-bold py-2 px-4 rounded-lg active:bg-lime-300">History</button>
     </div>
-
   </div>
 
-  <!-- Main Content  -->
+  <!-- Main Content Section -->
   <div class="pt-24 mt-6">
     <div class="max-w-4xl mx-auto p-6 space-y-6">
     
       <!-- Card 1 -->
       <div class="bg-white shadow-lg rounded-lg flex">
-        <!-- Left side image -->
         <img src="assets/noakhali.png" alt="Image 1" class="w-1/3 h-auto rounded-l-lg">
-        
-        <!-- Right side content -->
         <div class="p-4 w-2/3">
-          <!-- Logo and Amount -->
           <div class="flex items-center justify-between mb-2">
             <img src="assets/coin.png" alt="Logo" class="h-8">
             <span id="card-amount-1" class="text-lg font-semibold text-gray-700">0 BDT</span>
           </div>
-          
-          <!-- Title -->
           <h2 class="text-xl font-bold text-gray-800 mb-2">Donate for Flood at Noakhali, Bangladesh</h2>
-          
-          <!-- Paragraph text -->
-          <p class="text-gray-600 mb-4">The recent floods in Noakhali have caused significant damage to <br>
-             homes  infrastructure. Your donation will help provide essential <br> 
-             supplies and  to those affected by this disaster. Every contribution,<br> big or small, 
-             makes  difference. Please join us in supporting the relief <br>
-              efforts and making a positive impact on the lives of those in need.</p>
-          
-          <!-- Input box for donation amount -->
+          <p class="text-gray-600 mb-4">The recent floods in Noakhali have caused significant damage...</p>
           <input id="donation-input-1" type="text" placeholder="Write Donation Amount" class="border border-gray-300 rounded-lg py-2 px-4 mb-4 w-full">
-          
-          <!-- Donate Now button -->
-          <button onclick="donate(1)" class="bg-lime-400 hover:bg-blue-600 text-black font-bold py-2 px-4 rounded-lg w-full">
-            Donate Now
-          </button>
+          <button id="donateButton" onclick="donate(1)" class="bg-lime-400 hover:bg-blue-600 text-black font-bold py-2 px-4 rounded-lg w-full">Donate Now</button>
         </div>
       </div>
-  
+      
       <!-- Card 2 -->
       <div class="bg-white shadow-lg rounded-lg flex">
-        <!-- Left side image -->
         <img src="assets/feni.png" alt="Image 2" class="w-1/3 h-auto rounded-l-lg">
-        
-        <!-- Right side content -->
         <div class="p-4 w-2/3">
-          <!-- Logo and Amount -->
           <div class="flex items-center justify-center gap-2 mb-2 bg-gray-100 rounded-lg w-1/4">
             <img src="assets/coin.png" alt="Logo" class="h-6">
-            <span id="card-amount-2" class="text-lg font-small text-black"> 600 BDT</span>
+            <span id="card-amount-2" class="text-lg font-small text-black">600 BDT</span>
           </div>
-          
-          <!-- Title -->
-          <h2 class="text-xl font-bold text-gray-800 mb-2">Donate for Flood Relief in Feni,Bangladesh</h2>
-          
-          <!-- Paragraph text -->
-          <p class="text-gray-600 mb-4">The recent floods in Feni have devastated local communities, leading <br>
-             to severe disruption and loss. Your generous donation will help <br>
-              provide immediate aid, including food, clean water, and medical <br>
-               supplies, to those affected by this calamity. Together, we can offer<br>
-                crucial support and help rebuild lives in the aftermath of this disaster.<br>
-             Every contribution counts towards making a real difference. Please <br>
-             consider donating today to assist those in urgent need.</p>
-          
-          <!-- Input box for donation amount -->
+          <h2 class="text-xl font-bold text-gray-800 mb-2">Donate for Flood Relief in Feni, Bangladesh</h2>
+          <p class="text-gray-600 mb-4">The recent floods in Feni have devastated local communities...</p>
           <input id="donation-input-2" type="text" placeholder="Write Donation Amount" class="border border-gray-300 rounded-lg py-2 px-4 mb-4 w-full">
-          
-          <!-- Donate Now button -->
-          <button onclick="donate(2)" class="bg-lime-400 hover:bg-blue-600 text-black font-bold py-2 px-4 rounded-lg w-full">
-            Donate Now
-          </button>
+          <button id="donateButton" onclick="donate(2)" class="bg-lime-400 hover:bg-blue-600 text-black font-bold py-2 px-4 rounded-lg w-full">Donate Now</button>
         </div>
       </div>
-  
+      
       <!-- Card 3 -->
       <div class="bg-white shadow-lg rounded-lg flex">
-        <!-- Left side image -->
         <img src="assets/quota-protest.png" alt="Image 3" class="w-1/3 h-auto rounded-l-lg">
-        
-        <!-- Right side content -->
         <div class="p-4 w-2/3">
-          <!-- Logo and Amount -->
           <div class="flex items-center justify-between mb-2">
             <img src="assets/coin.png" alt="Logo" class="h-8">
             <span id="card-amount-3" class="text-lg font-semibold text-gray-700">2400 BDT</span>
           </div>
-          
-          <!-- Title -->
           <h2 class="text-xl font-bold text-gray-800 mb-2">Aid for Injured in the Quota Movement</h2>
-          
-          <!-- Paragraph text -->
-          <p class="text-gray-600 mb-4">The recent Quota movement has resulted in numerous injuries and <br>
-             significant hardship for many individuals. Your support is crucial in <br>
-             providing medical assistance, rehabilitation, and necessary supplies <br> 
-             to those affected. By contributing, you help ensure that injured <br> individuals receive the care and support they need during this <br> 
-             challenging time. Every donation plays a vital role in alleviating their <br>
-              suffering and aiding in their recovery. Please consider making a <br>
-              donation to support these brave individuals in their time of need.</p>
-          
-          <!-- Input box for donation amount -->
-          <input id="donation-input-3" type="text" placeholder="Write Donation Amount" 
-          class="border border-gray-300 rounded-lg py-2 px-4 mb-4 w-full">
-          
-          <!-- Donate Now button -->
-          <button onclick="donate(3)"  
-          class="bg-lime-400 hover:bg-blue-600 text-black font-bold py-2 px-4 rounded-lg w-full">
-            Donate Now
-          </button>
+          <p class="text-gray-600 mb-4">The recent Quota movement has resulted in numerous injuries...</p>
+          <input id="donation-input-3" type="text" placeholder="Write Donation Amount" class="border border-gray-300 rounded-lg py-2 px-4 mb-4 w-full">
+          <button id="donateButton" onclick="donate(3)" class="bg-lime-400 hover:bg-blue-600 text-black font-bold py-2 px-4 rounded-lg w-full">Donate Now</button>
         </div>
       </div>
-      
     </div>
-   
   </div>
+
+  <!-- JavaScript Section -->
   <script>
-    // Function to handle donation logic
+    let donationHistory = [];
+
     function donate(cardNumber) {
       const input = document.getElementById(`donation-input-${cardNumber}`);
       const cardAmountElement = document.getElementById(`card-amount-${cardNumber}`);
       const navbarAmountElement = document.getElementById("navbar-amount");
 
-      let donationAmount = parseFloat(input.value); // Get the donation amount from input
+      let donationAmount = parseFloat(input.value);
       if (isNaN(donationAmount) || donationAmount <= 0) {
         alert('Please enter a valid donation amount');
         return;
       }
 
-      // Update card amount
-      let cardAmount = parseFloat(cardAmountElement.innerText.replace('BDT ', ''));
+      let cardAmount = parseFloat(cardAmountElement.innerText.replace(' BDT', ''));
       cardAmount += donationAmount;
-      cardAmountElement.innerText = `BDT ${cardAmount}`;
+      cardAmountElement.innerText = `${cardAmount} BDT`;
 
-      // Update navbar amount
-      let navbarAmount = parseFloat(navbarAmountElement.innerText.replace('BDT ', ''));
+      let navbarAmount = parseFloat(navbarAmountElement.innerText.replace(' BDT', ''));
       navbarAmount -= donationAmount;
-      navbarAmountElement.innerText = `BDT ${navbarAmount}`;
+      navbarAmountElement.innerText = `${navbarAmount} BDT`;
 
-      // Clear the input field
+      const date = new Date();
+      const dateString = date.toString();
+
+      let cause, location;
+      if (cardNumber === 1) {
+        cause = "Flood";
+        location = "Noakhali, Bangladesh";
+      } else if (cardNumber === 2) {
+        cause = "Flood Relief";
+        location = "Feni, Bangladesh";
+      } else if (cardNumber === 3) {
+        cause = "Quota Movement";
+        location = "Bangladesh";
+      }
+
+      donationHistory.push({
+        amount: donationAmount,
+        cause: cause,
+        location: location,
+        date: dateString
+      });
+
       input.value = '';
     }
+
+    function goToHistory() {
+      const urlParams = donationHistory.map((donation, index) => {
+        return `amount${index}=${donation.amount}&cause${index}=${encodeURIComponent(donation.cause)}&location${index}=${encodeURIComponent(donation.location)}&date${index}=${encodeURIComponent(donation.date)}`;
+      }).join('&');
+      
+      window.location.href = `history.html?${urlParams}`;
+    }
   </script>
+
   
+<!-- Modal for Congratulations -->
+<div id="congratulationsModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+  <div class="bg-white p-6 rounded-lg shadow-lg text-center  flex flex-col items-center justify-center">
+      <h2 class="text-2xl font-bold mb-4 text-black">Congrates!</h2>
+      <img class="" src="assets/coin.png" alt="">
+      <p class="mb-4">You have donate for human kind</p>
+      <h4> succesfully</h4>
+      <button onclick="closeModal()" class="bg-slate-100 text-black font-bold py-4 px-4 mb-4 rounded-lg">Close confermation</button>
+  </div>
+</div>
+<script>
+// Function to show the congratulations modal
+function showCongratulations() {
+    const modal = document.getElementById('congratulationsModal');
+    modal.classList.remove('hidden');
+}
+
+// Function to close the congratulations modal
+function closeModal() {
+    const modal = document.getElementById('congratulationsModal');
+    modal.classList.add('hidden');
+}
+
+// Add event listener to the "Donate Now" button
+document.getElementById('donateButton').addEventListener('click', function() {
+    // Show the modal when donate button is clicked
+    showCongratulations();
+
+    // Optionally, close the modal automatically after a few seconds (e.g., 3 seconds)
+    setTimeout(closeModal, 8000);
+});
+</script>
+
   
 </body>
 

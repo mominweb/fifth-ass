@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    
+    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+    <style>
+        .answer {
+            display: none; /* Hide the answer initially */
+        }
+    </style>
+</head>
+<body class="lexend">
+    <div class="container mx-auto mt-8">
+        <h1 class="text-3xl font-bold mb-6 text-center">Important FAQ about DOM</h1>
+        <div class="bg-white p-6 rounded-lg shadow-lg space-y-4">
+            <div class="border-b pb-4">
+                <h2 class="font-semibold text-lg cursor-pointer question" onclick="toggleAnswer(1)">1. What is the Document Object Model (DOM)?</h2>
+                <p id="answer-1" class="answer">The DOM is a programming interface for web documents. It represents the structure of a document as a tree of objects, allowing programming languages to interact with the document's content and structure.</p>
+            </div>
+            <div class="border-b pb-4">
+                <h2 class="font-semibold text-lg cursor-pointer question" onclick="toggleAnswer(2)">2. How can I manipulate the DOM?</h2>
+                <p id="answer-2" class="answer">You can manipulate the DOM using JavaScript methods like `getElementById`, `querySelector`, and `createElement`, among others, to change elements, attributes, and styles.</p>
+            </div>
+            <div class="border-b pb-4">
+                <h2 class="font-semibold text-lg cursor-pointer question" onclick="toggleAnswer(3)">3. What are DOM events?</h2>
+                <p id="answer-3" class="answer">DOM events are actions or occurrences that happen in the browser, such as clicks, key presses, or mouse movements. JavaScript can be used to respond to these events using event listeners.</p>
+            </div>
+            <div class="border-b pb-4">
+                <h2 class="font-semibold text-lg cursor-pointer question" onclick="toggleAnswer(4)">4. What is the difference between HTML and the DOM?</h2>
+                <p id="answer-4" class="answer">HTML is a markup language used to create web pages, while the DOM is an object representation of the HTML document that allows scripts to manipulate the structure, style, and content dynamically.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAnswer(questionNumber) {
+            const answerElement = document.getElementById(`answer-${questionNumber}`);
+            if (answerElement.style.display === "none" || answerElement.style.display === "") {
+                answerElement.style.display = "block"; // Show the answer
+            } else {
+                answerElement.style.display = "none"; // Hide the answer
+            }
+        }
+    </script>
+</body>
+</html>
