@@ -21,18 +21,16 @@
         <div class="bg-slate-50	 h-12 flex items-center justify-between px-6">
           
           <div>
-            <button class="bg-lime-300  text-black font-bold py-2 px-4 rounded-lg">
+            <button onclick="window.location.href='faq.html'" class="bg-lime-300  text-black font-bold py-2 px-4 rounded-lg">
               Blog
             </button>
           </div>
           
-          <!-- Middle: "Donate Bangladesh" Text and Logo -->
           <div class="flex items-center space-x-6 py-6  donate">
             <img src="assets/logo.png" alt="Logo" class="h-8">
             <h2 class="text-xl font-semibold text-black">Donate Bangladesh</h2>
           </div>
     
-          <!-- Right Side: Amount and Logo -->
           <div class="flex items-center gap-2">
             <img src="assets/coin.png" alt="Currency Logo" class="h-6">
             <span id="navbar-amount" class="text-lg font-medium text-black mr-2">5500 BDT</span>
@@ -58,19 +56,16 @@
       <div class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-lg">
           <h2 class="text-2xl font-bold mb-4">Donation History</h2>
           <ul id="historyList" class="list-disc pl-5">
-              <!-- Donation history will be injected here -->
           </ul>
       </div>
   </div>
 
   <script>
-      // Function to get query parameters from URL
       function getQueryParams() {
     const params = new URLSearchParams(window.location.search);
     const donations = [];
     let index = 0;
 
-    // Continue fetching donations while there are query parameters matching the pattern
     while (params.has(`amount${index}`) && params.has(`cause${index}`) && params.has(`location${index}`) && params.has(`date${index}`)) {
         donations.push({
             amount: params.get(`amount${index}`),
@@ -84,7 +79,6 @@
     return donations;
 }
 
-// Populate the donation history
 const donations = getQueryParams();
 const historyList = document.getElementById('historyList');
 
@@ -102,9 +96,3 @@ if (donations.length === 0) {
   </script>
 </body>
 </html
-
-
-
-
-    
-
